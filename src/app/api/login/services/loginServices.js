@@ -1,6 +1,7 @@
 import bcrypt from 'bcrypt';
 import usersDAO from '../../users/db/usersDao.js';
-import { SignJWT } from 'jose';
+import { SignJWT, jwtVerify } from 'jose';
+
 const encoder = new TextEncoder();
 
 const SECRET_KEY = encoder.encode('TOKEN_KEY_EXTRADOS_BACK'); // Debe ser seguro y estar configurado en variables de entorno
